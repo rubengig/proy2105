@@ -1,0 +1,31 @@
+<div class="row justify-content-center m-3">
+  <div class="col-lg-7 col-md-10 col-sm-12">
+    <h1 class="my-5 text-center">
+      <i class="bi bi-card-list"></i>
+      Detalle de {{ oArticulo.nombre }}
+      <i class="bi bi-person-circle"></i>
+    </h1>
+    <br />
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ oArticulo.nombre}}</h5>
+        <p class="card-text">{{ oArticulo.descripcion }}</p>
+        <p class="card-text">Precio: {{ oArticulo.precio }} €</p>
+        <p class="card-text">Favoritos: {{ oArticulo.favoritos }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center mt-4">
+    <a class="btn btn-secondary mt-4 mx-1" href="user/articulo/plist">
+      <i class="bi bi-list"></i>
+      Ir a listado de articulos
+    </a>
+  </div>
+
+
+  <app-comentario-plist-unrouted [id_articulo]="oArticulo.id"></app-comentario-plist-unrouted>
+
+
+
+</div>

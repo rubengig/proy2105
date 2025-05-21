@@ -1,0 +1,51 @@
+<div class="row justify-content-center m-3">
+  <div class="col-lg-7 col-md-10 col-sm-12">
+    <h1 class="my-5 text-center">
+      <i class="bi bi-card-list"></i>
+      Detalle de articulo({{ oArticulo.id }}) : {{ oArticulo.nombre }}
+      <i class="bi bi-person-circle"></i>
+    </h1>
+    <br />
+    <table class="table table-striped table-bordered my-5 text-center">
+      <tbody>
+        <tr class="text-center">
+          <th scope="row" class="text-black text-end pe-5">Id</th>
+          <td class="text-start ps-5">{{ oArticulo.id }}</td>
+        </tr>
+        <tr class="text-center">
+          <th scope="row" class="text-black text-end pe-5">
+            Nombre
+          </th>
+          <td class="text-start ps-5">{{ oArticulo.nombre }}</td>
+        </tr>
+        <tr class="text-center">
+          <th scope="row" class="text-black text-end pe-5">
+           Descripcion
+          </th>
+          <td class="text-start ps-5">{{ oArticulo.descripcion }}</td>
+        </tr>
+        <tr class="text-center">
+          <th scope="row" class="text-black text-end pe-5">
+            Precio
+          </th>
+          <td class="text-start ps-5">{{ oArticulo.precio }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-center mt-4">
+    <a class="btn btn-secondary mt-4 mx-1" href="admin/articulo/plist">
+      <i class="bi bi-list"></i>
+      Ir a listado de articulos
+    </a>
+    <a class="btn btn-primary mt-4 mx-1" href="admin/articulo/edit/{{ oArticulo.id }}">
+      <i class="bi bi-pencil"></i>
+      Editar
+    </a>
+    <a class="btn btn-danger mt-4 mx-1" href="admin/articulo/delete/{{ oArticulo.id }}">
+      <i class="bi bi-trash"></i>
+      Borrar
+    </a>
+  </div>
+</div>
